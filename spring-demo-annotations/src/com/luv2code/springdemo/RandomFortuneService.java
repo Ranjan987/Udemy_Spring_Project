@@ -5,7 +5,8 @@ import java.util.Random;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RandomFortuneService implements FortuneService {
+public class RandomFortuneService implements FortuneService
+{
 
 	//Create an array of string
 	private String[] data= {
@@ -13,18 +14,18 @@ public class RandomFortuneService implements FortuneService {
 			"Diligence is the mother of good luck",
 	"The journey is the reward"};
 
-// create a random number generator
+	// create a random number generator
 	private Random myRandom= new Random();
 
 	@Override
 	public String getFortune() 
 	{
-// pick a random string from the array
-		
-	int index = myRandom.nextInt(data.length);
-	
-	String theFortune = data[index];
-	
+		// pick a random string from the array
+
+		int index = myRandom.nextInt(data.length);
+
+		String theFortune = data[index];
+
 		return theFortune;
 	}
 
