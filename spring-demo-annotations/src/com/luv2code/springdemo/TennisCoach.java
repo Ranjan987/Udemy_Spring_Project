@@ -2,11 +2,16 @@ package com.luv2code.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+
 
 @Component
 public class TennisCoach implements Coach 
 {
+	
+	// this is field injection
 	@Autowired
 	@Qualifier("fileFortuneService")
 	private FortuneService fortuneService;
@@ -39,7 +44,7 @@ public class TennisCoach implements Coach
 	}
 
 	@Override
-	public String getDailyFortunr() {
+	public String getDailyFortune() {
 
 		return fortuneService.getFortune();
 	}
