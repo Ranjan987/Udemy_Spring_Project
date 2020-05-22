@@ -17,7 +17,7 @@ public class SoccerConfig
 	}
 	//define bean for our soccer coach and inject dependency
 	@Bean
-	public Coach soccerCoach()
+	public SoccerCoach soccerCoach()
 	{
 		return new SoccerCoach(soccerFortuneService());
 	}
